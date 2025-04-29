@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         //04-29-25
-        int x = 10;
+        int x = 300;
         if (x ==10)
         {
             Console.WriteLine("X is 10");
