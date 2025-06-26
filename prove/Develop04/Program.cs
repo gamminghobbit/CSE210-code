@@ -1,9 +1,12 @@
 using System;
 
+// Stretch Feature: Tracks total time spent across all activities and displays it at the end.
 class Program
 {
     static void Main(string[] args)
     {
+        int totalTime = 0;
+
         while (true)
         {
             Console.Clear();
@@ -20,19 +23,23 @@ class Program
             {
                 BreathingActivity activity = new BreathingActivity();
                 activity.Run();
+                totalTime += activity.GetDuration(); // ✅ track time
             }
             else if (choice == "2")
             {
                 ReflectingActivity activity = new ReflectingActivity();
                 activity.Run();
+                totalTime += activity.GetDuration(); // ✅ track time
             }
             else if (choice == "3")
             {
                 ListingActivity activity = new ListingActivity();
                 activity.Run();
+                totalTime += activity.GetDuration(); // ✅ track time
             }
             else if (choice == "4")
             {
+                Console.WriteLine($"\nYou completed a total of {totalTime} seconds of mindfulness activities today."); // ✅ display total
                 Console.WriteLine("Thank you for using the Mindfulness Program. Goodbye!");
                 break;
             }
