@@ -1,0 +1,2 @@
+100
+ChecklistGoal|homework|for CSE 210|100|2000|200|1
